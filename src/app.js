@@ -8,6 +8,9 @@ window.onload = async function () {
         await getPokemon(i);
     }
     console.log(pokeDex);
+    for (let i = 1; i <= pokeCount; i++) {
+        renderPokemonList(pokeDex, i);
+    }
 };
 
 async function getPokemon(num) {
@@ -35,4 +38,12 @@ async function getPokemon(num) {
     } catch (error) {
         alert(`Something went wrong...`);
     }
+}
+
+function renderPokemonList(pokeDex, num) {
+    let pokeList = document.getElementById("pokemonList");
+    let pokeListItem = document.createElement("option");
+    pokeListItem.setAttribute("value", num);
+    pokeListItem.textContent = `${pokeDex[num]["name"]}`;
+    pokeList.appendChild(pokeListItem);
 }
