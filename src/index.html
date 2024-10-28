@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link href="./output.css" rel="stylesheet">
+    <!-- <script src="app.js" defer></script> -->
 </head>
 
-<body>
+<body class="flex justify-center h-lvh items-center bg-gray-900 text-white">
+    <div id="container" class="border-8 border-gray-600 rounded-xl h-max w-96">
+        <div id="ui" class="bg-red-500 rounded-md">
+            <h1 class="text-center text-4xl pb-4 pt-4">Pokédex</h1>
+            <div id="interact" class="flex gap-3 justify-center items-center pb-6">
+                <label for="pokemonName">Choose a Pokémon</label>
+                <select id="pokemonList" class="rounded-lg text-black focus:outline-none px-4 py-2">
+                    <option value="1">bulbasaur</option>
+                </select>
+                <button class="bg-green-300 px-4 py-2 rounded-lg hover:bg-green-400">🔍</button>
+            </div>
+        </div>
+        <div id="display">
 
+        </div>
+    </div>
 </body>
 
 </html>
