@@ -1,4 +1,4 @@
-let pokeCount = 251;
+let pokeCount = 151;
 let pokeDex = {};
 
 const pokeList = document.getElementById("pokemonList");
@@ -123,6 +123,7 @@ function setPokemonTypeColor(type) {
 
         case "FAIRY":
             type.style.backgroundColor = "#D685AD";
+            break;
 
         case "FIGHTING":
             type.style.backgroundColor = "#C22E28";
