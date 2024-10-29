@@ -1,4 +1,4 @@
-let pokeCount = 151;
+let pokeCount = 251;
 let pokeDex = {};
 
 const pokeList = document.getElementById("pokemonList");
@@ -92,11 +92,91 @@ function renderPokemonData(pokeDex) {
     pokemonName.textContent = pokeDex.name;
 
     pokemonType1.textContent = pokeDex.PrimaryType;
+    setPokemonTypeColor(pokemonType1);
 
     pokemonType2.textContent = pokeDex.SecondaryType;
+    setPokemonTypeColor(pokemonType2);
 
     pokemonHeight.textContent = pokeDex.height;
     pokemonWeight.textContent = pokeDex.weight;
 
     pokemonDescription.textContent = pokeDex.description;
+}
+
+function setPokemonTypeColor(type) {
+    type.style.borderRadius = "0.5rem";
+    type.style.padding = "8px 16px";
+    type.style.color = "#FFFFFF";
+
+    switch (type.textContent) {
+        case "BUG":
+            type.style.backgroundColor = "#A6B91A";
+            break;
+
+        case "DRAGON":
+            type.style.backgroundColor = "#6F35FC";
+            break;
+
+        case "ELECTRIC":
+            type.style.backgroundColor = "#F7D02C";
+            break;
+
+        case "FAIRY":
+            type.style.backgroundColor = "#D685AD";
+
+        case "FIGHTING":
+            type.style.backgroundColor = "#C22E28";
+            break;
+
+        case "FIRE":
+            type.style.backgroundColor = "#EE8130";
+            break;
+
+        case "FLYING":
+            type.style.backgroundColor = "#A98FF3";
+            break;
+
+        case "GHOST":
+            type.style.backgroundColor = "#735797";
+            break;
+
+        case "GRASS":
+            type.style.backgroundColor = "#7AC74C";
+            break;
+
+        case "GROUND":
+            type.style.backgroundColor = "#E2BF65";
+            break;
+
+        case "ICE":
+            type.style.backgroundColor = "#96D9D6";
+            break;
+
+        case "NORMAL":
+            type.style.backgroundColor = "#A8A77A";
+            break;
+
+        case "POISON":
+            type.style.backgroundColor = "#A33EA1";
+            break;
+
+        case "PSYCHIC":
+            type.style.backgroundColor = "#F95587";
+            break;
+
+        case "ROCK":
+            type.style.backgroundColor = "#B6A136";
+            break;
+
+        case "WATER":
+            type.style.backgroundColor = "#6390F0";
+            break;
+
+        case "NONE":
+            type.style.backgroundColor = "#808080";
+
+        default:
+            type.style.backgroundColor = "#808080";
+            break;
+    }
 }

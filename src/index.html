@@ -21,21 +21,23 @@
                 <button id="searchButton" class="bg-green-300 px-4 py-2 rounded-lg hover:bg-green-400">🔍</button>
             </div>
         </div>
-        <div id="display" class="bg-gray-200 text-black rounded-md hidden">
-            <div id="pokeInfo" class="flex justify-around py-2">
+        <div id="display" class="bg-gray-200 text-black rounded-md font-mono hidden">
+            <div id="pokeInfo" class="flex justify-around items-center py-2">
                 <div id="pokeLook">
-                    <img alt="poke photo">
+                    <img alt="poke photo" class="size-36">
                     <p class="text-center"></p>
                 </div>
-                <div id="pokeData">
+                <div id="pokeData" class="flex flex-col gap-2">
                     <p id="pokeName"></p>
-                    <span id="type1"></span>
-                    <span id="type2"></span>
+                    <div id="types">
+                        <span id="type1"></span>
+                        <span id="type2"></span>
+                    </div>
                     <p id="pokeHT"></p>
                     <p id="pokeWT"></p>
                 </div>
             </div>
-            <div id="pokeDesc" class="text-center pb-3">
+            <div id="pokeDesc" class="text-center pb-3 px-3">
 
             </div>
         </div>
