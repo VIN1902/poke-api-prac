@@ -10,19 +10,34 @@
 </head>
 
 <body class="flex justify-center h-lvh items-center bg-gray-900 text-white">
-    <div id="container" class="border-8 border-gray-600 rounded-xl h-max w-96">
+    <div id="container" class="border-8 border-gray-600 rounded-xl h-max w-450">
         <div id="ui" class="bg-red-500 rounded-md">
             <h1 class="text-center text-4xl pb-4 pt-4">Pokédex</h1>
-            <div id="interact" class="flex gap-3 justify-center items-center pb-6">
-                <label for="pokemonName">Choose a Pokémon</label>
+            <div id="interact" class="flex gap-1 justify-around items-center pb-6">
+                <label for="pokemonName" class="text-center">Choose a Pokémon</label>
                 <select id="pokemonList" class="rounded-lg text-black focus:outline-none px-4 py-2">
 
                 </select>
-                <button class="bg-green-300 px-4 py-2 rounded-lg hover:bg-green-400">🔍</button>
+                <button id="searchButton" class="bg-green-300 px-4 py-2 rounded-lg hover:bg-green-400">🔍</button>
             </div>
         </div>
-        <div id="display">
+        <div id="display" class="bg-gray-200 text-black rounded-md hidden">
+            <div id="pokeInfo" class="flex justify-around py-2">
+                <div id="pokeLook">
+                    <img alt="poke photo">
+                    <p class="text-center"></p>
+                </div>
+                <div id="pokeData">
+                    <p id="pokeName"></p>
+                    <span id="type1"></span>
+                    <span id="type2"></span>
+                    <p id="pokeHT"></p>
+                    <p id="pokeWT"></p>
+                </div>
+            </div>
+            <div id="pokeDesc" class="text-center pb-3">
 
+            </div>
         </div>
     </div>
 </body>
